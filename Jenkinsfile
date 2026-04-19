@@ -2,13 +2,13 @@ pipeline {
     agent any
     environment {
         IMAGE_NAME      = "myapp"
-        DOCKER_HUB_USER = "<your-dockerhub-username>"
+        DOCKER_HUB_USER = "sne2124"
     }
     stages {
         stage('Clone') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/<username>/<repo>.git'
+                    url: 'https://github.com/Sne2109/d5.git'
             }
         }
         stage('Build Image') {
