@@ -5,12 +5,7 @@ pipeline {
         DOCKER_HUB_USER = "sne2124"
     }
     stages {
-        stage('Clone') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/Sne2109/d5.git'
-            }
-        }
+        
         stage('Build Image') {
             steps {
                 sh 'docker build -t $DOCKER_HUB_USER/$IMAGE_NAME:latest .'
